@@ -1,6 +1,6 @@
 import React from 'react';
 import { categories } from '../data/categories';
-import { Category } from '../types/question';
+import { Category } from '@/types/question';
 
 interface CategoryListProps {
   selectedCategory: string | null;

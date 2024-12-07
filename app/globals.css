@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #2db55d;
+    --color-primary-hover: #249d4d;
+    --color-text-primary: #1a1a1a;
+    --color-text-secondary: #3c3c4399;
+  }
+}
+
+@layer components {
+  .leetcode-btn {
+    @apply px-3 py-1.5 text-sm rounded transition-colors duration-200;
+  }
+  
+  .leetcode-btn-primary {
+    @apply leetcode-btn bg-[#2db55d] text-white hover:bg-[#249d4d];
+  }
+  
+  .leetcode-btn-secondary {
+    @apply leetcode-btn border border-gray-200 hover:border-[#2db55d] hover:text-[#2db55d];
+  }
+  
+  .question-item {
+    @apply p-3 cursor-pointer hover:bg-gray-50 border-b border-gray-100 transition-colors duration-200;
+  }
+  
+  .question-item.active {
+    @apply bg-[#f7f9fc] border-l-4 border-l-[#2db55d];
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
