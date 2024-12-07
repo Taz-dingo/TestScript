@@ -23,7 +23,7 @@ export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const [selectedQuestion, setSelectedQuestion] = useState(questions[0])
   const [code, setCode] = useState(selectedQuestion.starterCode)
-  const [results, setResults] = useState(null)
+  const [results, setResults] = useState<any[]>([])
 
   const filteredQuestions = selectedCategory
     ? questions.filter((q) => q.category === selectedCategory)
@@ -34,7 +34,7 @@ export default function Home() {
     if (question) {
       setSelectedQuestion(question)
       setCode(question.starterCode)
-      setResults(null)
+      setResults([])
     }
   }
 

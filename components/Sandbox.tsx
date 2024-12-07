@@ -2,6 +2,13 @@ import { useState, useCallback } from 'react';
 import dynamic from 'next/dynamic';
 import { TestCase, TestResult } from '../types/question';
 
+// Extend the Window interface to include eval
+declare global {
+  interface Window {
+    eval: (code: string) => any;
+  }
+}
+
 interface SandboxProps {
   code: string;
   testCases: TestCase[];
